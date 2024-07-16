@@ -11,10 +11,12 @@ import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 import backImage from "../assets/images/bread.jpg";
+import { useRouter } from "expo-router";
 
 const { width } = Dimensions.get("window");
 
 export default function HomeScreen() {
+  const router = useRouter()
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -37,7 +39,7 @@ export default function HomeScreen() {
             <TouchableOpacity
               style={styles.button}
               onPress={() => {
-                /* Handle button press */
+                router.push("/(tabs)")
               }}
             >
               <Text style={styles.buttonText}>Get Started</Text>

@@ -3,13 +3,12 @@ import React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Stack, Tabs } from "expo-router";
 
-import Colors from "../../constants/Colors";
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: Colors.primary,
+        tabBarActiveTintColor: "#0a7ea4",
       }}
     >
       <Tabs.Screen
