@@ -25,7 +25,7 @@ export default function HomeScreen() {
         <SafeAreaView style={styles.main}>
           <View style={styles.spacer} />
           <LinearGradient
-            colors={["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.5)"]}
+            colors={["rgba(0,0,0,0.5)", "rgba(0,0,0,0.8)"]}
             style={styles.card}
           >
             <Text style={styles.title}>Mini Muffin Bakery</Text>
@@ -83,12 +83,14 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 10,
     textAlign: "center",
+    color: "#fff", // Text color for better contrast
   },
   subtitle: {
     fontSize: 16,
     marginBottom: 20,
     textAlign: "center",
     fontWeight: "bold",
+    color: "#fff", // Text color for better contrast
   },
   button: {
     backgroundColor: "#f39c12",
