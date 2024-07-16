@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-, "hooks/useColorScheme.js", "hooks/useColorScheme.web.js", "hooks/useThemeColor.js", "constants/Colors.js"  ]
+, "src/hooks/useColorScheme.js", "src/hooks/useColorScheme.web.js", "src/hooks/useThemeColor.js", "src/constants/Colors.jsx", "src/app/+not-found.jsx", "src/app/_layout.jsx", "src/app/index.jsx"  ]
 }
