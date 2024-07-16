@@ -22,12 +22,13 @@ export default function HomeScreen() {
         resizeMode="cover"
         style={styles.imageBackground}
       >
+        <LinearGradient
+          colors={["rgba(0, 0, 0, 0.8)", "rgba(0, 0, 0, 0.5)"]}
+          style={styles.gradient}
+        />
         <SafeAreaView style={styles.main}>
           <View style={styles.spacer} />
-          <LinearGradient
-            colors={["rgba(0,0,0,0.5)", "rgba(0,0,0,0.8)"]}
-            style={styles.card}
-          >
+          <View style={styles.card}>
             <Text style={styles.title}>Mini Muffin Bakery</Text>
             <Text style={styles.subtitle}>
               The Cradle of Cake. Explore through a curations of delicious
@@ -41,7 +42,7 @@ export default function HomeScreen() {
             >
               <Text style={styles.buttonText}>Get Started</Text>
             </TouchableOpacity>
-          </LinearGradient>
+          </View>
         </SafeAreaView>
       </ImageBackground>
       <StatusBar style="auto" />
@@ -55,13 +56,16 @@ const styles = StyleSheet.create({
   },
   imageBackground: {
     flex: 1,
-    justifyContent: "flex-end", // Aligns children to the bottom
+    justifyContent: "flex-end",
+  },
+  gradient: {
+    ...StyleSheet.absoluteFillObject,
   },
   main: {
     flex: 1,
-    justifyContent: "flex-end", // Aligns children to the bottom
-    paddingHorizontal: 20, // Padding on the sides
-    paddingBottom: 20, // Padding at the bottom
+    justifyContent: "flex-end",
+    paddingHorizontal: 20,
+    paddingBottom: 20,
   },
   spacer: {
     flex: 1,
@@ -69,6 +73,7 @@ const styles = StyleSheet.create({
   card: {
     width: width - 40,
     alignSelf: "center",
+    backgroundColor: "rgba(255, 255, 255, 0.5)",
     paddingVertical: 20,
     paddingHorizontal: 20,
     borderRadius: 15,
@@ -83,14 +88,14 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 10,
     textAlign: "center",
-    color: "#fff", // Text color for better contrast
+    color: "#000",
   },
   subtitle: {
     fontSize: 16,
     marginBottom: 20,
     textAlign: "center",
     fontWeight: "bold",
-    color: "#fff", // Text color for better contrast
+    color: "#000",
   },
   button: {
     backgroundColor: "#f39c12",
