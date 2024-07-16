@@ -3,8 +3,7 @@ import React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Stack, Tabs } from "expo-router";
 
-import Colors from "@/src/constants/Colors";
-
+import Colors from "../../constants/Colors";
 export default function TabLayout() {
   return (
     <Tabs
