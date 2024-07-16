@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "minimuffin",
-    "slug": "minimuffin",
+    "name": "Mini Muffin Bakery",
+    "slug": "mini-muffin-bakery",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/splash.svg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -31,6 +31,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "73ef59eb-aa8c-4813-932f-10797c4c944e"
+      }
+    },
+    "owner": "dalienst"
   }
 }
