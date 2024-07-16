@@ -4,13 +4,13 @@ import {
   Text,
   StyleSheet,
   ImageBackground,
-  Button,
   Dimensions,
   TouchableOpacity,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import backImage from "../assets/images/bread.jpg";
+import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
+import backImage from "../assets/images/bread.jpg";
 
 const { width } = Dimensions.get("window");
 
@@ -24,9 +24,15 @@ export default function HomeScreen() {
       >
         <SafeAreaView style={styles.main}>
           <View style={styles.spacer} />
-          <View style={styles.card}>
+          <LinearGradient
+            colors={["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.5)"]}
+            style={styles.card}
+          >
             <Text style={styles.title}>Mini Muffin Bakery</Text>
-            <Text style={styles.subtitle}>The Cradle of Cake. Explore through a curations of delicious recipes.</Text>
+            <Text style={styles.subtitle}>
+              The Cradle of Cake. Explore through a curations of delicious
+              recipes.
+            </Text>
             <TouchableOpacity
               style={styles.button}
               onPress={() => {
@@ -35,7 +41,7 @@ export default function HomeScreen() {
             >
               <Text style={styles.buttonText}>Get Started</Text>
             </TouchableOpacity>
-          </View>
+          </LinearGradient>
         </SafeAreaView>
       </ImageBackground>
       <StatusBar style="auto" />
@@ -63,7 +69,6 @@ const styles = StyleSheet.create({
   card: {
     width: width - 40,
     alignSelf: "center",
-    backgroundColor: "rgba(255, 255, 255, 0.8)",
     paddingVertical: 20,
     paddingHorizontal: 20,
     borderRadius: 15,
